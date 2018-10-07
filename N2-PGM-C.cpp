@@ -1,4 +1,3 @@
-//Integrantes do grupo: Bruno nishitokukado Juan Correa Matheus dos Santos Souza
 #include <stdio.h>
 #include <stdlib.h>
 
