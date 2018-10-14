@@ -80,13 +80,14 @@ void validaSaque(int *valores){
 	int saque, i=0, bandeja1 = 250, bandeja2 = 250, bandeja3 = 250, escolha, saques_realizados=0, total_sacado=0,resta=0, saques_malsucedidos=0;
 	int opumx, opumy, opumz,opdoisx, opdoisy, opdoisz,optresx, optresy, optresz;
 	int b1=0,b2=0,b3=0;
+	int x, y,z,cont;
 	
 	FILE *arqSaida;
 	arqSaida = fopen("saida.txt","w");
-	while(true){
+	while(0){
 		system("cls");
 		printf("----------ORGANIZANDO----------\n");
-		for(int cont=0;cont<3;cont++){
+		for(cont=0;cont<3;cont++){
 			printf("Bandeja %d: %d\n",cont+1,valores[cont]);
 		}
 		printf("Saque desejado (0) para sair: ");
@@ -110,9 +111,9 @@ void validaSaque(int *valores){
 			continue;
 		} else{
 			fprintf(arqSaida,"SAQUE NUMERO %d - VALOR: R$ %d\nOpcoes mostradas:\n",saques_realizados+1,saque);
-			for (int x = saque/valores[0]; x >= 0; --x){
-		        for (int y = saque/valores[1]; y >= 0; --y){
-		            for (int z = saque/valores[2]; z >= 0; --z){
+			for (x = saque/valores[0]; x >= 0; --x){
+		        for (y = saque/valores[1]; y >= 0; --y){
+		            for (z = saque/valores[2]; z >= 0; --z){
 		                if (saque == (x * valores[0] + y*valores[1] + z*valores[2])){
 		                    printf("OPCAO %d) %d nota(s) de R$ %d + %d nota(s) de R$ %d + %d nota(s) de R$ %d\n",i+1, x,valores[0], y,valores[1], z,valores[2]);
 		                    i++;
