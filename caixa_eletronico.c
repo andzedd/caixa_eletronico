@@ -84,7 +84,7 @@ void validaSaque(int *valores){
 	
 	FILE *arqSaida;
 	arqSaida = fopen("saida.txt","w");
-	while(0){
+	while(1){
 		system("cls");
 		printf("----------ORGANIZANDO----------\n");
 		for(cont=0;cont<3;cont++){
